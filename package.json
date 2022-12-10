@@ -1,0 +1,33 @@
+{
+  "name": "@mx-design/utils",
+  "version": "0.1.0",
+  "description": "mx-design utils lib",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md",
+    "README.zh.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.12",
+    "compressing": "1.6.2",
+    "download": "8.0.0",
+    "fs-extra": "11.1.0",
+    "inquirer": "6.0.0",
+    "ora": "6.1.2",
+    "ts-node": "10.9.1",
+    "chalk": "4.0.0",
+    "typescript": "4.9.4",
+    "rimraf": "3.0.2",
+    "@babel/runtime": "7.20.6",
+    "enquirer": "2.3.6"
+  }
+}
