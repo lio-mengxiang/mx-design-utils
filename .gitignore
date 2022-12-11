@@ -9,6 +9,7 @@ esm
 cjs
 package-lock.json
 pnpm-lock.yaml
+types
 temp*
 
 

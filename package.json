@@ -1,10 +1,12 @@
 {
   "name": "@mx-design/utils",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "mx-design utils lib",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "license": "MIT",
   "files": [
+    "types",
     "lib",
     "README.md",
     "README.zh.md"

@@ -2,7 +2,7 @@ import execQuick from './execQuick';
 import getGitRootPath from './getGitRootPath';
 import print from './print';
 
-export async function checkGitRemote() {
+export default async function checkGitRemote() {
   if (getGitRootPath()) {
     const { code, stdout } = await execQuick('git remote -v');
     if (code === 0 && stdout.match('(push)')) {
