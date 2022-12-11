@@ -24,7 +24,7 @@ const questions = [
       if (!val) {
         return '请输入文件名'; // 验证一下输入是否不为空
       }
-      if (fs.existsSync(val)) {
+      if (fs.accessSync(val, fs.constants.F_OK)) {
         return '文件已存在'; // 判断文件是否存在
       } else {
         return true;

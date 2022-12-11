@@ -5,18 +5,16 @@ import print from './print';
 
 const DIR_NAME = './tem@@.zip';
 const removeTemDir = () => {
-  try {
-    if (fs.statSync(DIR_NAME)?.isDirectory()) {
-      fs.removeSync(DIR_NAME);
-    }
-  } catch (error) {}
+  if (fs.accessSync(DIR_NAME, fs.constants.F_OK)) {
+    fs.removeSync(DIR_NAME);
+  }
 };
 /**
  * 下载远程项目模板的方法
  */
 export default function downloadTemplate({ url, targetDir = './' }: { url: string; targetDir?: string }): Promise<any> {
   removeTemDir();
-  print.info('download start');
+  print.info('download start, please wait...');
   // 通过get方法下载
   return download(url)
     .on('end', () => {
