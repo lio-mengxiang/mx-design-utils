@@ -8,3 +8,4 @@ export { default as getProjectPath } from './getProjectPath';
 export { default as print } from './print';
 export { default as spinner } from './spinner';
 export * from './is';
+export * from './hooks';
