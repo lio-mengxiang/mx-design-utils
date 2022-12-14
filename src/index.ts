@@ -7,5 +7,6 @@ export { default as getGitRootPath } from './getGitRootPath';
 export { default as getProjectPath } from './getProjectPath';
 export { default as print } from './print';
 export { default as spinner } from './spinner';
+export { default as omit } from './omit';
 export * from './is';
 export * from './hooks';
