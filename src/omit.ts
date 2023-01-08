@@ -1,7 +1,7 @@
 /**
  * delete keys from object
  */
-export default function omit<T extends Record<string | number, any>, K extends keyof T>(
+export function omit<T extends Record<string | number, any>, K extends keyof T>(
   obj: T,
   keys: Array<K | string> // string 为了某些没有声明的属性被omit
 ): Omit<T, K> {

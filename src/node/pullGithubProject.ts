@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import enquirer from 'enquirer';
-import downloadTemplate from './download';
-import print from './print';
+import { downloadTemplate } from './download';
+import { log } from '../log';
 
 type IRepo = {
   owner: string;
@@ -74,6 +74,6 @@ enquirer
     downloadTemplate({ url: githubDownloadUrl({ owner, name, branch }), targetDir });
   })
   .catch((err) => {
-    print.error(err);
+    log.error(err);
     process.exit(1);
   });

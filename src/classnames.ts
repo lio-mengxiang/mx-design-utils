@@ -5,7 +5,7 @@ type ClassNamesArg = string | string[] | { [key: string]: any } | undefined | nu
 /**
  * 代替classnames库,样式合并的方法
  */
-export default function cs(...args: ClassNamesArg[]): string {
+export function cs(...args: ClassNamesArg[]): string {
   const length = args.length;
   let classNames: string[] = [];
   for (let i = 0; i < length; i++) {

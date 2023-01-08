@@ -3,7 +3,7 @@ interface IDebounced<T extends (...args: any) => any> {
   (...args: any[]): ReturnType<T>;
 }
 
-export default function debounce<T extends (...args: any) => any>(func: T, wait: number, immediate?: boolean): IDebounced<T> {
+export function debounce<T extends (...args: any) => any>(func: T, wait: number, immediate?: boolean): IDebounced<T> {
   let timeout: NodeJS.Timeout | null;
   let result: any;
 

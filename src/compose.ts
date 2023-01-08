@@ -8,7 +8,7 @@ type IMiddleware = {
   fn: ({ middlewareData, next }: { middlewareData: Record<string, any>; next: () => void }) => Promise<{ data: Record<string, any> }>;
 };
 
-export default function compose(middleware: IMiddleware[]) {
+export function compose(middleware: IMiddleware[]) {
   let middlewareData: Record<string, any> = {};
   async function dispatch(index: number) {
     if (index === middleware.length) return;

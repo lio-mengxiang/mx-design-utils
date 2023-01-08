@@ -1,13 +1,13 @@
 import ora from 'ora';
-import print from './print';
+import { log } from '../log';
 
-export default function withOra(
+export function withOra(
   promiseFn: () => Promise<any>,
   { text, successText, failText, startText }: { text: string; successText: string; failText: string; startText?: string }
 ) {
   return new Promise((resolve, reject) => {
     const spinner = ora(text).start();
-    startText && print.info(startText);
+    startText && log.info(startText);
 
     promiseFn()
       .then((result) => {

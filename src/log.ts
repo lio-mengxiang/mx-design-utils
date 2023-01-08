@@ -14,7 +14,7 @@ function print(color: string, ...args: string[]) {
   }
 }
 
-function log(...args) {
+export function log(...args) {
   console.log(...args);
 }
 
@@ -32,5 +32,3 @@ log.divider = (level: ILevel = 'info') => {
   const logger = log[level] || log.info;
   logger('---------------------------------------------------------------------------------------');
 };
-
-export default log;
